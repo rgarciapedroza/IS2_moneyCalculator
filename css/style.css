@@ -8,25 +8,50 @@ a {
     color: #000;
 }
 
+p {
+    overflow-wrap: break-word;
+}
+
+header {
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+    padding: 19px 0;
+    overflow: hidden;
+}
+
 body {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    min-height: 100vh;
-    height: 100%;
+    display:flex;
+    flex-wrap: wrap;;
+    flex-direction: row;
     background: url("https://wallpapers.com/images/hd/world-globe-tyjrsnehdnbzey0v.jpg") no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(4px);
 }
 
-header {
-    position: fixed;
-    background-color: white;
-    top: 0;
-    left: 0;
-    z-index: 1;
+footer {
+    background-color: #d9d9d9;
+    z-index: 0;
     width: 100%;
-    padding: 19px 0;
+    height: fit-content;
+    margin:0px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+header nav {
+    display: flex;
+}
+
+header ul {
+    position:fixed;
+    right: 0;
+}
+
+.container {
+    align-items: center;
+    min-height: 100vh;
+    max-height: fit-content;
 }
 
 ul {
@@ -55,32 +80,15 @@ nav a:hover {
     background-color: #222;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0rem;
-}
-
 footer p {
     margin: 25px 0;
 }
 
-.footer_left {
-    background-color: #d9d9d9;
-    width: 50%;
+footer div {
     float: left;
     text-align: center;
-    padding: 120px 0;
-}
-
-.footer_right {
-    background-color: #d9d9d9;
-    width: 50%;
-    float: right;
-    text-align: center;
-    padding: 100px 0;
+    margin:0 20px;
+    height:100%;
 }
 
 .form_container.active .login_form {
@@ -102,6 +110,7 @@ footer p {
     border: 2px solid;
     padding: 10px 20px;
     margin: 0px 50px;
+    width: fit-content;
 }
 
 .form_container h1 {
