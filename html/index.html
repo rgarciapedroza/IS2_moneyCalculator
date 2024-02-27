@@ -4,22 +4,24 @@
         <title>Login page</title>
         <script type="text/javascript" src="../js/xlu-include-file.js"></script>
         <script src="../js/script.js"></script>
-        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/style-imports.css" rel="stylesheet">
     </head>
     
     
     <body>
-        <header xlu-include-file="header.html"></header>
+        <header xlu-include-file="./structure-components/header.html"></header>
 
         <div class="body-full">
+                <!--El translate es para que se pueda alinear verticalmente desde el centro del elemento en vez de desde su borde 
+                    superior, así si el form_container este cambia de tamaño seguirá estando centrado de esta forma-->
                 <div class="form_container" style="position: absolute; right: 0; transform: translateY(-50%); top:50vh">
-                    <form class="login_form" xlu-include-file="login_form.html"></form>
-                    <form class="signup_form" xlu-include-file="signup_form.html"></form>
+                    <form class="login_form" xlu-include-file="./general-components/login_form.html"></form>
+                    <form class="signup_form" xlu-include-file="./general-components/signup_form.html"></form>
                 </div>
         </div>
         
 
-        <footer xlu-include-file="footer.html"></footer>
+        <footer xlu-include-file="./structure-components/footer.html"></footer>
     </body>
 
     <script>
