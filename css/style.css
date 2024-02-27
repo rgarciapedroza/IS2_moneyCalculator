@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -14,7 +14,9 @@ p {
 
 body {
     display:grid;
-    grid-template-rows: max(10vh,fit-content) max(80vh, fit-content) max(10vh, fit-content);
+    height: max(100vh, fit-content);
+    width: max(100vw, fit-content);
+    grid-template-rows: minmax(10vh,auto) minmax(90vh,auto) minmax(10vh,auto);
     grid-template-columns: repeat(3, 1fr);
     background: url("https://wallpapers.com/images/hd/world-globe-tyjrsnehdnbzey0v.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -34,7 +36,6 @@ header {
     grid-column: 1 / 4;
     grid-row: 2;
     align-items: center;
-    height: 100%;
 }
 
 .body-sidebar {
@@ -126,6 +127,7 @@ footer div {
     padding: 10px 20px;
     margin: 0px 50px;
     width: fit-content;
+    height: fit-content;
 }
 
 .form_container h1 {
