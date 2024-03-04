@@ -44,7 +44,7 @@ let tloader = new THREE.TextureLoader();
 let json;
 let bodies = dt.bodies;
 let cities = dt.cities;
-let globecontainer = "globe";
+let globeContainer = "globe";
 let container;
 
 let uniforms;
@@ -60,11 +60,9 @@ async function run() {
   //}
 }
 
-//scene.add( normalLine() );
-
 async function init() {
 
-  container = document.getElementById(globecontainer);
+  container = document.getElementById(globeContainer);
 
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(
