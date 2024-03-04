@@ -18,14 +18,24 @@
                     <form class="login_form" xlu-include-file="./general-components/login_form.html"></form>
                     <form class="signup_form" xlu-include-file="./general-components/signup_form.html"></form>
                 </div>
-                <div class="globe-container" xlu-include-file="./map-components/globe-container.html" style="width: 200px; height: 200px;"></div>
+                <div style="height: 250px;"></div>
+                <div class="globe-container" xlu-include-file="./map-components/globe-container.html" style="width: 200px; height: 200px; border-radius: 50%;"></div>
         </div>
         
 
         <footer xlu-include-file="./structure-components/footer.html"></footer>
     </body>
 
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.134.0/build/three.module.js",
+            "three/": "https://cdn.skypack.dev/three@0.134.0/"
+          }
+        }
+    </script>
     <script>
         xLuIncludeFile();
-    </script>        
+    </script>
+    <script src="../js/map-components/globe.js" type="module"></script>        
 </html>

@@ -1,21 +1,10 @@
 import * as THREE from "three";
 import {
   OrbitControls,
-  MapControls,
 } from "three/examples/jsm/controls/OrbitControls";
-//import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
-import { TrackballControls } from "three/examples/jsm/controls/TrackballControls.js";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-//import { GLBLoader } from 'three/examples/jsm/loaders/GLBLoader.js';
-import { TextureLoader } from "three/src/loaders/TextureLoader.js";
-import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
-import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
-import * as ut from "./utility/utility.js";
-import * as sh from "./graphics/shaders.js";
-import * as dt from "/public/files/data.js";
+import * as ut from "./utility.js";
+import * as sh from "./shaders.js";
+import * as dt from "./data.js";
 
 //const sh = require('./shaders.js');
 
@@ -33,19 +22,15 @@ let camcontrols;
 const dummy = new THREE.Object3D();
 let timestamp;
 let code_generator = ut.makeRandomRange(1000);
-var bloomComposer = null;
-var bloomComposer2 = null;
-let composer, renderer2, mixer, clock;
 const fov = 60;
 const aspect = window.innerWidth / window.innerHeight;
 const near = 0.1;
 const far = 1000;
 let tloader = new THREE.TextureLoader();
 let json;
-let bodies = dt.bodies;
-let cities = dt.cities;
 let globeContainer = "globe";
 let container;
+let bodies = dt.bodies;
 
 let uniforms;
 
