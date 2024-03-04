@@ -52,12 +52,8 @@ let uniforms;
 run();
 
 async function run() {
-  //let handshake = await ut.probeBackend();
-  //Change 0 to 1 if you want to skip the handshake check for whatever reason
   await init();
   animationLoop();
-  //if (handshake || 0) {
-  //}
 }
 
 async function init() {
