@@ -23,6 +23,10 @@ li {
     display: inline;
 }
 
+fieldset {
+    border: none;
+}
+
 nav a {
     font-size: 1.06em;
     padding: 14px 16px;
@@ -42,6 +46,7 @@ nav a:hover {
     width: 283px;
     height: 25px;
     padding: 3px 12px;
+    margin: 8px 0;
     background-color: #9d9d9d;
     border-radius: 20px;
     border: #9d9d9d;
