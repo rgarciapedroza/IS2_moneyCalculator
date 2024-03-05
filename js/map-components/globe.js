@@ -37,6 +37,7 @@ let uniforms;
 run();
 
 async function run() {
+  console.log("Running");
   await init();
   animationLoop();
 }

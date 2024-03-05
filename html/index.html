@@ -7,6 +7,14 @@
         <link href="../css/style-imports.css" rel="stylesheet">
     </head>
     
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.134.0/build/three.module.js",
+            "three/": "https://cdn.skypack.dev/three@0.134.0/"
+          }
+        }
+    </script>
     
     <body>
         <header xlu-include-file="./structure-components/header.html"></header>
@@ -26,16 +34,7 @@
         <footer xlu-include-file="./structure-components/footer.html"></footer>
     </body>
 
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://unpkg.com/three@0.134.0/build/three.module.js",
-            "three/": "https://cdn.skypack.dev/three@0.134.0/"
-          }
-        }
-    </script>
     <script>
         xLuIncludeFile();
     </script>
-    <script src="../js/map-components/globe.js" type="module"></script>        
 </html>
