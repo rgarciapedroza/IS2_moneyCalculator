@@ -39,8 +39,8 @@ export let bodies = {"baseline": {
   },
   //"transparency": "https://cdn.glitch.global/7bb54dbb-ebd4-4a1b-8f14-dcda7da4af29/earthcloudmaptrans_invert.jpg?v=1699204869312",
   "definition": 200,
-  "versh": sh.vertexShader_earth,
-  "fragsh": sh.fragmentShader_alwayslit
+  "versh": sh.vertexShader_earth(),
+  "fragsh": sh.fragmentShader_alwayslit()
   
  },
 };
