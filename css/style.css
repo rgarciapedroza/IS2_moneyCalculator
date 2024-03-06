@@ -76,3 +76,7 @@ nav a:hover {
 .login_form_button:hover {
     text-decoration: underline;
 }
+
+.right_sidebar {
+    float: right;
+}
