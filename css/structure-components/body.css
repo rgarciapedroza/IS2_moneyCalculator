@@ -24,6 +24,7 @@ Estas dos clases son para el contenido del body si no tenemos sidebar (ocupa la 
 ancho)), y si la tenemos (ocupa la fila de en medio, las dos últimas columnas, dejando la primera para el sidebar). 
 */
 .body-full {
+    position: relative;
     grid-column: 1 / 4;
     grid-row: 2;
     align-items: center;
