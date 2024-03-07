@@ -4,4 +4,5 @@
 @import "./structure-components/footer.css";
 @import "./general-components/form-container.css";
 @import "./general-components/delete_confirmation.css";
+@import "./map-components/globe.css";
 @import "./style.css";
