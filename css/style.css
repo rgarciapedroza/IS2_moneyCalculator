@@ -14,15 +14,6 @@ p {
     overflow-wrap: break-word;
 }
 
-ul {
-    float: right;
-    margin: 10px 40px;
-}
-
-li {
-    display: inline;
-}
-
 fieldset {
     border: none;
 }
@@ -89,4 +80,8 @@ nav a:hover {
 
 .login_form_button:hover {
     text-decoration: underline;
+}
+
+.right_sidebar {
+    float: right;
 }

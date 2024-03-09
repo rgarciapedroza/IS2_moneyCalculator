@@ -13,7 +13,13 @@ header nav {
 
 header ul {
     position:fixed;
+    float: right;
     right: 0;
+    margin: 10px 40px;
+}
+
+header li {
+    display: inline;
 }
 
 header p {
