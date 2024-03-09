@@ -3,7 +3,8 @@ header {
     grid-row: 1;
     background-color: white;
     z-index: 1;
-    padding: 19px 0;
+    padding: 1%;
+    position: relative;
     overflow: hidden;
 }
 
