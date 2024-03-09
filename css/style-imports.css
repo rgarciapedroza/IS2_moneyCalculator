@@ -3,5 +3,6 @@
 @import "./structure-components/sidebar.css";
 @import "./structure-components/footer.css";
 @import "./general-components/form-container.css";
+@import "./image-components/cascade-view.css";
 @import "./general-components/album-visualization.css";
 @import "./style.css";
