@@ -34,7 +34,7 @@
     height: 50px;
     width: 25px;
     border-top-left-radius: 25px;
-    box-shadow: 0 -25px 0 0 rgb(255, 255, 255);; /* This is where the magic happens! */
+    box-shadow: 0 -25px 0 0 rgb(255, 255, 255); /* This is where the magic happens! */
   
   }
 
@@ -42,11 +42,11 @@
     content: '';
     display:block;
     width:100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding:10px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    background-color: rgb(189, 189, 189);
+    background-color: rgb(255, 255, 255);
     z-index: 0;
     border:none;
     cursor: pointer;
@@ -54,31 +54,10 @@
     font-family:'Times New Roman', Times, serif; 
   }
 
-  .sidebar-tab:hover {
-    text-decoration: underline;
-  }
-
- .homeTab {
-
-  }
-
-  .profileTab{
-    
-  }
-
-  .homeTab:hover {
-    text-decoration: underline;
-    
-  }
-
-  .profileTab:hover {
-    text-decoration: underline;
-  }
-
-  .clicked{
+  .sidebar-tab.clicked {
     background-color:  rgb(189, 189, 189);
   }
 
-  .not-clicked {
+  .sidebar-tab.not-clicked {
     background-color: rgb(255, 255, 255);
   }
