@@ -15,7 +15,7 @@ body {
     backdrop-filter: blur(4px);
 }
 
-body > .no-footer {
+body.no-footer {
     grid-template-rows: minmax(10vh,auto) minmax(90vh,auto) 0vh;
 }
 

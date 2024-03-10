@@ -7,9 +7,15 @@
         <link href="../../css/style-imports.css" rel="stylesheet">
         <script type="text/javascript" src="../../js/xlu-include-file.js"></script>
     </header>
-    <body class="no-footer">
+    <body class="no-footer" style="background: black;">
         <header xlu-include-file="../structure-components/header.html"></header>
-        <!-- xlu-include-file="../structure-components/sidebar.html"-->
+        <div class="body-sidebar">
+            <div 
+            style="
+                width: 100%;
+                height: 100%;"
+            xlu-include-file="../map-components/globe-container.html"></div>
+        </div>
         <div xlu-include-file="../structure-components/sidebar.html"></div>
         
         <!--div class="background-sidebar" xlu-include-file="../structure-components/sidebar.html"></div-->
