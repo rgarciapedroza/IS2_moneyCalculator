@@ -9,10 +9,14 @@ body {
     Este enlace explica cómo trabajar con las grids: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
     */
     grid-template-rows: minmax(10vh,auto) minmax(90vh,auto) minmax(10vh,auto);
-    grid-template-columns: repeat(3, minmax(1fr,auto));
+    grid-template-columns: minmax(20vw,auto) 1fr 1fr;
     background: url("https://wallpapers.com/images/hd/world-globe-tyjrsnehdnbzey0v.jpg") no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(4px);
+}
+
+body > .no-footer {
+    grid-template-rows: minmax(10vh,auto) minmax(90vh,auto) 0vh;
 }
 
 /*Body está dividido en una grid de 3x3. Las tres filas son para header, body y footer, y las tres columnas son para tenerlas si nos 
