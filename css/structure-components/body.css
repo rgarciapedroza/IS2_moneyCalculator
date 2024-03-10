@@ -9,7 +9,7 @@ body {
     Este enlace explica cómo trabajar con las grids: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
     */
     grid-template-rows: minmax(10vh,auto) minmax(90vh,auto) minmax(10vh,auto);
-    grid-template-columns: minmax(20vw,auto) 1fr 1fr;
+    grid-template-columns: minmax(10vw,auto) 1fr 1fr;
     background: url("https://wallpapers.com/images/hd/world-globe-tyjrsnehdnbzey0v.jpg") no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(4px);
