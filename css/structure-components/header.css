@@ -3,6 +3,8 @@ header {
     grid-row: 1;
     background-color: white;
     z-index: 1;
+    display:flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
 }
@@ -12,11 +14,40 @@ header nav {
     display: flex;
 }
 
+
 header ul {
-    position:fixed;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
     float: right;
     right: 0;
     margin: 10px 40px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+@media(max-width: 38em){
+    header ul {
+        display: none;
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        display: block;
+        padding: 5px 5px;
+        height: 80%;
+        right: 0;
+    }
+
+    .hamburger-menu:hover {
+        background-color: #b9b9b9;
+    }
+}
+
+.menu {
+    display: none;
 }
 
 header li {

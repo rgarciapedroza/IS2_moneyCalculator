@@ -16,7 +16,7 @@ body {
 }
 
 body.no-footer {
-    grid-template-rows: minmax(10vh,auto) minmax(90vh,auto) 0vh;
+    grid-template-rows: 10vh minmax(90vh,auto) 0vh;
 }
 
 /*Body está dividido en una grid de 3x3. Las tres filas son para header, body y footer, y las tres columnas son para tenerlas si nos 
