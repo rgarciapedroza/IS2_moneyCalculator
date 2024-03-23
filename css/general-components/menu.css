@@ -1,0 +1,22 @@
+.menu {
+    background-color: white;
+    height: 100%;
+    display: none;
+}
+
+.menu li {
+    margin: 30px 0;
+    padding: 20px 10px;
+}
+
+.menu li:hover {
+    color: #ddd;
+    background-color: #222;
+}
+
+.menu ul {
+    position: absolute;
+    margin: 10px 40px;
+    width: 100%;
+    list-style: none;
+}

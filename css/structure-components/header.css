@@ -39,15 +39,12 @@ header ul {
         padding: 5px 5px;
         height: 80%;
         right: 0;
+        cursor: pointer;
     }
 
     .hamburger-menu:hover {
         background-color: #b9b9b9;
     }
-}
-
-.menu {
-    display: none;
 }
 
 header li {
