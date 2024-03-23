@@ -1,7 +1,11 @@
 .menu {
+    position: absolute;
     background-color: white;
-    height: 100%;
+    bottom: 0;
+    height: 90%;
+    width: 100%;
     display: none;
+    z-index: 4;
 }
 
 .menu li {
