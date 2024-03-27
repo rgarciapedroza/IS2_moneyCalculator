@@ -1,7 +1,8 @@
 window.onload = function () {
     const formContainer = document.querySelector('.form_container');
     const signup = document.querySelector('.signup_form_button');
-    const login = document.querySelector(".login_form_button")
+    const login = document.querySelector(".login_form_button");
+    const deviceTypes = ['desktop', 'mobile'];
     
     signup.addEventListener('click', () => {
         formContainer.classList.add('active');
@@ -11,32 +12,47 @@ window.onload = function () {
         formContainer.classList.remove('active');
     })
 
+    function arraysEqual(a, b) {
+        if (a === b) return true;
+        if (a == null || b == null) return false;
+        if (a.length !== b.length) return false;
+      
+        for (var i = 0; i < a.length; ++i) {
+          if (a[i] !== b[i]) return false;
+        }
+        return true;
+      }
+
     let currentDevice;
-    var deviceTypes = ['desktop', 'mobile'];
+
     function determineClass() {
+        let returner = [];
         var screenWidth = window.innerWidth;
         if (screenWidth > 390) {
-            return 'desktop';
+            returner.push('desktop');
         } else {
-            return 'mobile';
+            returner.push('mobile');
         }
+        return returner;
     }
 
     function applyResponsiveClasses() {
+        //Get array of all classes that apply to current circumstances
         let buffer = determineClass();
-        if (buffer !== currentDevice) {
+        //Determine if we need to change classes
+        if (!arraysEqual(buffer, currentDevice)) {
+            console.log(currentDevice)
+            //If we do, update current device
             currentDevice = buffer.slice();
-            let others = deviceTypes.slice();
-            others.splice(deviceTypes.indexOf(currentDevice), 1);
     
             // Iterate through all elements in the DOM
             var allElements = document.getElementsByTagName('*');
             for (var i = 0; i < allElements.length; i++) {
                 var element = allElements[i];
-                element.classList.add(currentDevice);
-                for (var j in others) {
-                    element.classList.remove(others[j]);
-                }
+                //Remove all device classes
+                for (var j in deviceTypes) element.classList.remove(deviceTypes[j]);
+                //Add current device classes
+                for (var j in currentDevice) element.classList.add(currentDevice[j]);
             }
         }
     }
