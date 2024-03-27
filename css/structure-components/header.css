@@ -10,8 +10,19 @@ header {
 }
 
 header nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
     height: 100%;
+    /*height: 100%;
+    display: flex;*/
+}
+
+header .header-logo {
+    margin-left:40px;
     display: flex;
+    align-items: center;
+    grid-column: 1;
 }
 
 
@@ -24,7 +35,7 @@ header ul {
     margin: 10px 40px;
 }
 
-.hamburger-menu {
+header .hamburger-menu {
     display: none;
 }
 
