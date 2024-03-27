@@ -18,14 +18,6 @@ header nav {
     display: flex;*/
 }
 
-header .header-logo {
-    margin-left:40px;
-    display: flex;
-    align-items: center;
-    grid-column: 1;
-}
-
-
 header ul {
     position: absolute;
     top: 50%;
@@ -39,12 +31,19 @@ header .hamburger-menu {
     display: none;
 }
 
+header .header-logo {
+    margin-left:40px;
+    display: flex;
+    align-items: center;
+    grid-column: 1;
+}
+
 @media(max-width: 38em){
     header ul {
         display: none;
     }
 
-    .hamburger-menu {
+    header .hamburger-menu {
         position: absolute;
         display: block;
         padding: 5px 5px;
@@ -53,7 +52,7 @@ header .hamburger-menu {
         cursor: pointer;
     }
 
-    .hamburger-menu:hover {
+    header .hamburger-menu:hover {
         background-color: #b9b9b9;
     }
 }
