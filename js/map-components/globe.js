@@ -264,9 +264,11 @@ async function generateMainBodies() {
 }
 
 function onWindowResize(e) {
+  fakeCamera.aspect = container.offsetWidth / container.offsetHeight;
+  fakeCamera.updateProjectionMatrix();
   renderer.setSize(container.offsetWidth, container.offsetHeight);
-  uniforms.u_resolution.value.x = renderer.domElement.width;
-  uniforms.u_resolution.value.y = renderer.domElement.height;
+  //uniforms.u_resolution.value.x = renderer.domElement.width;
+  //uniforms.u_resolution.value.y = renderer.domElement.height;
 }
 
 //Bucle de animación
