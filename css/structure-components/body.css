@@ -19,6 +19,16 @@ body.no-footer {
     grid-template-rows: 10vh minmax(90vh,auto) 0vh;
 }
 
+body.mobile {
+    grid-template-rows: 10vh minmax(80vh,auto) minmax(10vh,auto) minmax(10vh,auto);
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+body.no-footer.mobile {
+    grid-template-rows: 10vh minmax(80vh,auto) minmax(10vh,auto) 0vh;
+}
+
+
 /*Body está dividido en una grid de 3x3. Las tres filas son para header, body y footer, y las tres columnas son para tenerlas si nos 
 hace falta, por ejemplo para el ancho del body si hay sidebar o no. El ancho de las columnas es el máximo entre 1/3 del espacio 
 disponible y lo que requiera el contenido*/
@@ -35,6 +45,18 @@ ancho)), y si la tenemos (ocupa la fila de en medio, las dos últimas columnas, 
 }
 
 .body-sidebar {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    align-items: center;
+}
+
+.body-sidebar.desktop {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    align-items: center;
+}
+
+.body-sidebar.mobile {
     grid-column: 2 / 4;
     grid-row: 2;
     align-items: center;

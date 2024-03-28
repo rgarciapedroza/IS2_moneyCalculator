@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Home page</title>
+
+        <script type="text/javascript" src="/js/xlu-include-file.js"></script>
+        <script src="/js/responsive-design/responsive.js"></script>
+
+        <link href="/css/style-imports.css" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
-        <title>Worldpix</title>
-        <link href="../../css/style-imports.css" rel="stylesheet">
-        <script type="text/javascript" src="../../js/xlu-include-file.js"></script>
     </head>
     <body class="no-footer" style="background: black;">
-        <header xlu-include-file="../structure-components/header.html"></header>
+        <header xlu-include-file="/html/components/structure-components/header.html"></header>
         <div class="body-sidebar">
             <div 
             style="
                 width: 100%;
                 height: 100%;"
-            xlu-include-file="../map-components/globe-container.html"></div>
+            xlu-include-file="/html/components/map-components/globe-container.html"></div>
         </div>
-        <div xlu-include-file="../structure-components/sidebar.html"></div>
-        <div class="menu" xlu-include-file="./menu_elements.html"></div>
+        <div xlu-include-file="/html/components/structure-components/sidebar.html"></div>
+        <div class="menu" xlu-include-file="/html/components/general-components/menu_elements.html"></div>
         
         <!--div class="background-sidebar" xlu-include-file="../structure-components/sidebar.html"></div-->
         <!--div xlu-include-file="../../html/structure-components/album-preview.html"></div-->    
