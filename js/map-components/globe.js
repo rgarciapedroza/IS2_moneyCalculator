@@ -49,7 +49,7 @@ async function init() {
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(
     75,
-    container.offsetWidtht / container.offsetHeight,
+    container.offsetWidth / container.offsetHeight,
     0.1,
     1000
   );
@@ -264,9 +264,7 @@ async function generateMainBodies() {
 }
 
 function onWindowResize(e) {
-  console.log("Height: ", container.offsetHeight);
-  
-  let x, y, w, h;
+    let x, y, w, h;
 
   //Efecto similar al de defecto, ocupa toda la ventana
   x = Math.floor(container.offsetWidth * 0.0);
