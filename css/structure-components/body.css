@@ -24,7 +24,7 @@ body.mobile {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-body.no-footer, .mobile {
+body.no-footer.mobile {
     grid-template-rows: 10vh minmax(80vh,auto) minmax(10vh,auto) 0vh;
 }
 
@@ -44,13 +44,19 @@ ancho)), y si la tenemos (ocupa la fila de en medio, las dos últimas columnas, 
     align-items: center;
 }
 
-.body-sidebar, .desktop {
+.body-sidebar {
     grid-column: 2 / 4;
     grid-row: 2;
     align-items: center;
 }
 
-.body-sidebar, .mobile {
+.body-sidebar.desktop {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    align-items: center;
+}
+
+.body-sidebar.mobile {
     grid-column: 2 / 4;
     grid-row: 2;
     align-items: center;
