@@ -1,4 +1,6 @@
 window.onload = function () {
+    const deviceTypes = ['desktop', 'mobile'];
+    let currentDevice;
 
     function arraysEqual(a, b) {
         if (a === b) return true;
@@ -10,8 +12,6 @@ window.onload = function () {
         }
         return true;
       }
-
-    let currentDevice;
 
     function determineClass() {
         let returner = [];
@@ -29,7 +29,6 @@ window.onload = function () {
         let buffer = determineClass();
         //Determine if we need to change classes
         if (!arraysEqual(buffer, currentDevice)) {
-            console.log(currentDevice)
             //If we do, update current device
             currentDevice = buffer.slice();
     
