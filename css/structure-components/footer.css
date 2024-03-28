@@ -1,6 +1,6 @@
 footer {
     grid-column: 1 / 4;
-    grid-row: 3;
+    grid-row: 4;
     background-color: white;
     z-index: 0;
     width: 100%;
