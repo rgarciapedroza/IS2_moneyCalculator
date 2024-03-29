@@ -1,7 +1,5 @@
 body {
     display:grid;
-    height: max(100vh, fit-content);
-    width: max(100vw, fit-content);
     /*
     Primera fila: su altura será el máximo entre 10% de la altura de pantalla, y lo que requiera el contenido
     Segunda fila: su altura será el máximo entre 90% de la altura de pantalla, y lo que requiera el contenido

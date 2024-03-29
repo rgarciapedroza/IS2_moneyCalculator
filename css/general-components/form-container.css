@@ -9,6 +9,21 @@
     height: fit-content;
 }
 
+.form_container.session {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top:50vh;
+}
+
+.form_container.session.mobile {
+    position: absolute;
+    right: 50vw;
+    top:50vh;
+    transform: translateX(50%) translateY(-50%) scale(70%);
+    margin: 0px;
+}
+
 .form_container.active .login_form {
     display: none;
 }

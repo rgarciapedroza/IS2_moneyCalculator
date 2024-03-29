@@ -14,6 +14,7 @@ header nav {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100%;
     height: 100%;
+    width: 100%;
     /*height: 100%;
     display: flex;*/
 }
