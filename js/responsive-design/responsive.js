@@ -1,16 +1,6 @@
 window.onload = function () {
-    const formContainer = document.querySelector('.form_container');
-    const signup = document.querySelector('.signup_form_button');
-    const login = document.querySelector(".login_form_button");
     const deviceTypes = ['desktop', 'mobile'];
-    
-    signup.addEventListener('click', () => {
-        formContainer.classList.add('active');
-    })
-    
-    login.addEventListener('click', () => {
-        formContainer.classList.remove('active');
-    })
+    let currentDevice;
 
     function arraysEqual(a, b) {
         if (a === b) return true;
@@ -22,8 +12,6 @@ window.onload = function () {
         }
         return true;
       }
-
-    let currentDevice;
 
     function determineClass() {
         let returner = [];
@@ -41,7 +29,6 @@ window.onload = function () {
         let buffer = determineClass();
         //Determine if we need to change classes
         if (!arraysEqual(buffer, currentDevice)) {
-            console.log(currentDevice)
             //If we do, update current device
             currentDevice = buffer.slice();
     
@@ -66,4 +53,3 @@ window.onload = function () {
         applyResponsiveClasses();
     });
 }
-

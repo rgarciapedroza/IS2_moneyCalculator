@@ -49,7 +49,7 @@ async function init() {
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(
     75,
-    container.offsetWidtht / container.offsetHeight,
+    container.offsetWidth / container.offsetHeight,
     0.1,
     1000
   );
@@ -67,7 +67,7 @@ async function init() {
     //shadowMap: true
   });
   container.appendChild(renderer.domElement)
-  renderer.autoClear = false;
+  renderer.autoClear = true;
   renderer.setPixelRatio(1);
   renderer.setClearColor(0x000000, 0.0);
 
@@ -264,16 +264,7 @@ async function generateMainBodies() {
 }
 
 function onWindowResize(e) {
-  renderer.setSize(container.offsetWidth, container.offsetHeight);
-  uniforms.u_resolution.value.x = renderer.domElement.width;
-  uniforms.u_resolution.value.y = renderer.domElement.height;
-}
-
-//Bucle de animación
-function animationLoop() {
-  timestamp = (Date.now() - t0) * accglobal;
-
-  let x, y, w, h;
+    let x, y, w, h;
 
   //Efecto similar al de defecto, ocupa toda la ventana
   x = Math.floor(container.offsetWidth * 0.0);
@@ -281,9 +272,21 @@ function animationLoop() {
   w = Math.floor(container.offsetWidth * 1);
   h = Math.floor(container.offsetHeight * 1);
 
-  renderer.setViewport(x, y, w, h);
+  //renderer.setViewport(x, y, w, h);
+  renderer.setSize(container.offsetWidth, container.offsetHeight);
   renderer.setScissor(x, y, w, h);
   renderer.setScissorTest(true);
+  
+  fakeCamera.aspect = container.offsetWidth / container.offsetHeight;
+  fakeCamera.updateProjectionMatrix();
+  //uniforms.u_resolution.value.x = renderer.domElement.width;
+  //uniforms.u_resolution.value.y = renderer.domElement.height;
+}
+
+//Bucle de animación
+function animationLoop() {
+  timestamp = (Date.now() - t0) * accglobal;
+
   renderer.render(scene, earthCamera);
 
   requestAnimationFrame(animationLoop);

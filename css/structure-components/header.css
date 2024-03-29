@@ -32,7 +32,7 @@ header .hamburger-menu {
 }
 
 header .header-logo {
-    margin-left:40px;
+    margin-left:20px;
     display: flex;
     align-items: center;
     grid-column: 1;
