@@ -6,7 +6,7 @@ body {
     Tercera fila: su altura será el máximo entre 10% de la altura de pantalla, y lo que requiera el contenido
     Este enlace explica cómo trabajar con las grids: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
     */
-    grid-template-rows: 3.25em minmax(calc(100vh - 3.25em), auto) 0vh minmax(7em,auto);
+    grid-template-rows: 3.25em minmax(calc(100vh - 3.25em), fit-content) 0px minmax(7em, fit-content);
     grid-template-columns: minmax(10vw,auto) 1fr 1fr;
     background: url("https://wallpapers.com/images/hd/world-globe-tyjrsnehdnbzey0v.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -14,24 +14,24 @@ body {
 }
 
 body.no-footer {
-    grid-template-rows: 3.25em minmax(calc(100vh - 3.25em), auto) 0vh 0vh;
+    grid-template-rows: 3.25em minmax(calc(100vh - 3.25em), fit-content) 0px 0px;
 }
 
 body.mobile {
-    grid-template-rows: 3.25em minmax(calc(100vh - 6.5em), auto) 3.25em minmax(7em,auto);
+    grid-template-rows: 3.25em minmax(calc(100vh - 6.5em), fit-content) 3.25em minmax(7em,fit-content);
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 body.mobile.no-footer {
-    grid-template-rows: 3.25em minmax(calc(100vh - 6.5em), auto) 3.25em 0vh;
+    grid-template-rows: 3.25em minmax(calc(100vh - 6.5em), fit-content) 3.25em 0px;
 }
 
 body.home.desktop {
-    grid-template-rows: 3.25em calc(100vh - 3.25em) 0vh 0vh;
+    grid-template-rows: 3.25em calc(100vh - 3.25em) 0px 0px;
 }
 
 body.home.mobile {
-    grid-template-rows: 3.25em calc(100vh - 6.5em) 3.25em 0vh;
+    grid-template-rows: 3.25em calc(100vh - 6.5em) 3.25em 0px;
 }
 
 
@@ -47,6 +47,8 @@ ancho)), y si la tenemos (ocupa la fila de en medio, las dos últimas columnas, 
     grid-column: 1 / 4;
     grid-row: 2;
     align-items: center;
+    height:auto;
+    overflow:none;
 }
 
 .body-sidebar {
