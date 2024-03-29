@@ -48,8 +48,6 @@ ancho)), y si la tenemos (ocupa la fila de en medio, las dos últimas columnas, 
     grid-column: 1 / 4;
     grid-row: 2;
     align-items: center;
-    height:auto;
-    overflow:none;
 }
 
 .body-sidebar {
