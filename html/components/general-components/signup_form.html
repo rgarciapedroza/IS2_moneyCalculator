@@ -3,29 +3,13 @@
 <fieldset class="input_box">
     <p><input type="text" placeholder="User name" name="userName" required></p>
     <p><input type="email" placeholder="Email" name="email" required></p>
-    <p><input type="password" placeholder="Password" name="password" 
+    <p><input type="password" placeholder="Password" name="passwordField" 
         pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
         title="Password must contain 8 characters, letters and numbers and an special character."
+        onkeyup="validatePassword()"
         required></p>
-    <p><input type="password" placeholder="Confirm password" name="confirmPassword" 
-        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required></p>
+    <p><input type="password" placeholder="Confirm password" name="confirmPassword" onkeyup="validatePassword()" required></p>
 </fieldset>
-
-<!--div class="input_box">
-    <p><input type="text" placeholder="User name" name="userName" required></p>
-</div>
-
-<div class="input_box">
-    <p><input type="email" placeholder="Email" name="email" required></p>
-</div>
-
-<div class="input_box">
-    <p><input type="password" placeholder="Password" name="password" required></p>
-</div>
-
-<div class="input_box">
-    <p><input type="password" placeholder="Confirm password" name="confirmPassword" required></p>
-</div-->
 
 <section class="btn_box">
     <button type="submit" class="button">Sign up</button>
