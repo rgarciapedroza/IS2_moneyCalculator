@@ -1,26 +1,33 @@
 .menu {
-    position: absolute;
-    background-color: white;
-    bottom: 0;
-    height: 90vh;
-    width: 100%;
-    display: none;
+    display:none;
+    position:absolute;
+    grid-auto-rows:auto;
+    grid-template-columns: 1fr;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(231, 231, 231);
+    top: 3.25em;
+    right:0;
     z-index: 4;
 }
 
 .menu li {
-    margin: 30px 0;
-    padding: 20px 10px;
+    margin: 10px 0;
+    padding: 10px 5px;
+    width:100%;
 }
 
 .menu li:hover {
-    color: #ddd;
-    background-color: #222;
+    background-color: var(--structure-element-button-selected);
 }
 
 .menu ul {
-    position: absolute;
-    margin: 10px 40px;
-    width: 100%;
+    margin: 10px 20px 20px 20px;
     list-style: none;
+}
+
+.menu a {
+    display:flex;
+    align-items: center;
+    justify-content: left;
 }

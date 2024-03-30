@@ -1,5 +1,5 @@
 .form_container {
-    background-color: #b9b9b9;
+    background-color: var(--structure-element-background);
     border-radius: 13px;
     border-color: black;
     border: 2px solid;
@@ -7,6 +7,21 @@
     margin: 40px 50px;
     width: fit-content;
     height: fit-content;
+}
+
+.form_container.session {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top:50vh;
+}
+
+.form_container.session.mobile {
+    position: absolute;
+    right: 50vw;
+    top:50vh;
+    transform: translateX(50%) translateY(-50%) scale(70%);
+    margin: 0px;
 }
 
 .form_container.active .login_form {
