@@ -24,7 +24,7 @@ body.no-footer {
 }
 
 body.mobile {
-    grid-template-rows: 3.25em min-content 3.25em minmax(7em,fit-content);
+    grid-template-rows: 3.25em min-content 3.25em minmax(7em,auto);
     grid-template-columns: 1fr 1fr 1fr;
 }
 
