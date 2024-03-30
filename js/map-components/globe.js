@@ -292,20 +292,3 @@ function animationLoop() {
   requestAnimationFrame(animationLoop);
   earthCamera.copy(fakeCamera);
 }
-
-/*let album = {
-  string: name;
-  string: userID;
-  string: date-start;
-  string: date-end;
-  string: city-name;
-  string: description;
-  [float, float]: coordinates;
-  [image]: images;
-}
-
-let image = {
-  string: date;
-  string: description;
-  Buffer: image;
-}*/

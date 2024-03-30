@@ -34,7 +34,7 @@ export function imageFileToBufferArray(image) {
 
 export function generateImageJSON(ID="No image ID", filename="No filename", date='No date', description='No description', image=new ArrayBuffer()) {
     let returner = {
-        id: ID,
+        imageID: ID,
         filename: filename,
         date: date,
         description: description,
@@ -63,7 +63,7 @@ export function generateAlbumJSON(name='No user name', userID='No user ID', albu
 //I get the feeling that defining UUIDs client-side is the mother of all bad ideas
 export function addImage(album, imageJSON, imageID=album["albumID"] + '-' + uuidv4()) {
     let newImage = imageJSON;
-    newImage["ID"] = imageID;
+    newImage["imageID"] = imageID;
     album["images"][imageID] = newImage;
 }
 
@@ -81,7 +81,7 @@ export function getImage(album, ID) {
 
 export function replaceImage(album, replacedID, iNewImage) {
     let newImage = iNewImage;
-    newImage["ID"] = replacedID;
+    newImage["imageID"] = replacedID;
     album["images"][replacedID] = newImage;
 }
 
@@ -97,3 +97,28 @@ export function JSONToDict(json) {
         return null;
     }
 }
+
+//Basic structure of album JSON
+/*
+{
+    name: string,
+    userID: string,
+    albumID: string,
+    date-start: Date,
+    date-end: Date,
+    city-name: string,
+    description: string,
+    coordinates: [float, float],
+    images: {image JSONs},
+}
+
+//Basic structure of image JSON
+
+{
+    imageID: string,
+    filename: string,
+    date: Date,
+    description: string,
+    image: ArrayBuffer,
+}
+*/
