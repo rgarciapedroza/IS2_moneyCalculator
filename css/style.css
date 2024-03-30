@@ -1,3 +1,11 @@
+:root {
+    --min-body-height-desktop: calc(100vh - 3.25em);
+    --min-body-height-mobile: calc(100vh - 6.5em);
+    --structure-element-background: rgb(228, 228, 228);
+    --structure-element-button-idle: rgb(200, 200, 200);
+    --structure-element-button-selected: rgb(172, 172, 172);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +30,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ddd;
-    background-color: #222;
+    background-color: var(--structure-element-button-selected);;
 }
 
 .input_box {
@@ -36,7 +43,7 @@ nav a:hover {
     height: 25px;
     padding: 3px 12px;
     margin: 8px 0;
-    background-color: #9d9d9d;
+    background-color: var(--structure-element-button-idle);;
     border-radius: 20px;
     border: #9d9d9d;
 }
@@ -50,7 +57,7 @@ nav a:hover {
 }
 
 .button {
-    background-color: #9d9d9d;
+    background-color: var(--structure-element-button-idle);
     border: #9d9d9d;
     border-radius: 13px;
     padding: 17px 50px;

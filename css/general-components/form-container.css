@@ -1,5 +1,5 @@
 .form_container {
-    background-color: #b9b9b9;
+    background-color: var(--structure-element-background);
     border-radius: 13px;
     border-color: black;
     border: 2px solid;

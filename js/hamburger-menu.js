@@ -9,7 +9,7 @@ let leftSidebar = document.querySelector(".left-sidebar");
 hamburgerMenu.addEventListener('click', 
     async function () {
         clicked = !clicked;
-        menu.style.display = !clicked ? 'block' : 'none';
+        menu.style.display = !clicked ? 'grid' : 'none';
         hamburgerMenu.src = clicked ? "/files/hamburger-menu.png" : "/files/close.png";
     }
 );
