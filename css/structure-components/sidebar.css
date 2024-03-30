@@ -89,7 +89,6 @@ sidebar.mobile {
 
   .home, .profile {
       display: flex;
-      transform: translateY(-50%);
       border: none; 
       background-color: white;
       position: relative;
@@ -97,12 +96,12 @@ sidebar.mobile {
       align-items: center;
   }
 
-  .home :hover {
-      background-color:  rgb(241, 241, 241);
+  .home:hover {
+      background-color:  #b9b9b9;
     }
 
-  .profile :hover {
-      background-color:  rgb(241, 241, 241);
+  .profile:hover {
+      background-color:  #b9b9b9;
   }
 
   .sidebar-background {
