@@ -3,12 +3,21 @@
 }
 
 .about-us-text {
-    position: absolute;
     border: 2px solid black;
     border-radius: 6px;
     padding: 30px;
     margin: 100px;
-    width: 400px;
+}
+
+@media (min-width: 576px) {
+    .about-us-text {
+        width: 350px;
+    }
+
+    .objectives-container h1 {
+        left: 200px;
+    }
+    
 }
 
 .about-us-text h1 {
@@ -28,7 +37,6 @@
 }
 
 .who-are-we-text {
-    width: 500px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -43,6 +51,5 @@
     height: 100%;
     width: 200px;
     padding: 20px;
-    left: 200px;
     background-color: rgb(190, 190, 190);
 }
