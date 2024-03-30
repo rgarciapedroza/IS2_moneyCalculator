@@ -32,12 +32,13 @@ body.mobile.no-footer {
     grid-template-rows: 3.25em min-content 3.25em 0px;
 }
 
-body.home.desktop {
+body.home-body.desktop {
     grid-template-rows: 3.25em min-content 0px 0px;
 }
 
-body.home.mobile {
+body.home-body.mobile {
     grid-template-rows: 3.25em min-content 3.25em 0px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
