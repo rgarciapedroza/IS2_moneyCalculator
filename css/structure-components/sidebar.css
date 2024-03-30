@@ -44,6 +44,10 @@ sidebar.mobile {
     background-color: var(--structure-element-button-idle);
   }
 
+  .sidebar-tab:hover {
+    background-color: var(--structure-element-button-hover);
+  }
+
   .sidebar-background {
     position:absolute;
     top: 0px;
@@ -97,11 +101,11 @@ sidebar.mobile {
   }
 
   .home:hover {
-      background-color:  var(--structure-element-button-selected);
+      background-color:  var(--structure-element-button-hover);
     }
 
   .profile:hover {
-      background-color:  var(--structure-element-button-selected);
+      background-color:  var(--structure-element-button-hover);
   }
 
   .sidebar-background {
