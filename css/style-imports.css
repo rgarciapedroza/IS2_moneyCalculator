@@ -1,6 +1,7 @@
 @import "./structure-components/header.css";
 @import "./structure-components/body.css";
 @import "./structure-components/sidebar.css";
+@import "./structure-components/sidebar-phone.css";
 @import "./structure-components/footer.css";
 @import "./general-components/form-container.css";
 @import "./image-components/cascade-view.css";

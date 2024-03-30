@@ -1,0 +1,25 @@
+
+.footer-content {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    justify-content: space-around;
+}
+
+.home, .profile {
+    display: flex;
+    transform: translateY(-50%);
+    border: none; 
+    background-color: white;
+    position: relative;
+    top: 50%;
+    align-items: center;
+}
+
+.home :hover {
+    background-color:  rgb(241, 241, 241);
+  }
+
+.profile :hover {
+    background-color:  rgb(241, 241, 241);
+  }
