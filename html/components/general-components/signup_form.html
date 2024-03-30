@@ -3,8 +3,12 @@
 <fieldset class="input_box">
     <p><input type="text" placeholder="User name" name="userName" required></p>
     <p><input type="email" placeholder="Email" name="email" required></p>
-    <p><input type="password" placeholder="Password" name="password" required></p>
-    <p><input type="password" placeholder="Confirm password" name="confirmPassword" required></p>
+    <p><input type="password" placeholder="Password" name="password" 
+        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
+        title="Password must contain 8 characters, letters and numbers and an special character."
+        required></p>
+    <p><input type="password" placeholder="Confirm password" name="confirmPassword" 
+        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required></p>
 </fieldset>
 
 <!--div class="input_box">
