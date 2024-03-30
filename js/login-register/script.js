@@ -12,3 +12,17 @@ function startFormButtons () {
     })
 }
 
+function validatePassword(){
+    var password = document.querySelector("input[name='passwordField']");
+    var confirmPassword = document.querySelector("input[name='confirmPassword']");
+
+    if(password.value != confirmPassword.value) {
+        confirmPassword.setCustomValidity("Passwords don't match");
+        alert(password.value);
+      } else {
+        confirmPassword.setCustomValidity('');
+      }
+    
+    password.onchange = validatePassword;
+    confirmPassword.onkeyup = validatePassword;
+}
