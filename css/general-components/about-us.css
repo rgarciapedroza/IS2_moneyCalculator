@@ -35,12 +35,11 @@
 }
 
 .objectives-container {
-    position: absolute;
     height: 90vh;
 }
 
 .objectives-container h1 {
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 200px;
     padding: 20px;
