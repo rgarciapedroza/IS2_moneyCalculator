@@ -28,7 +28,6 @@ function applyResponsiveClasses() {
     let buffer = determineClass();
     //Determine if we need to change classes
     if (!arraysEqual(buffer, currentDevice)) {
-        console.log("a?",buffer,currentDevice,window.innerWidth)
         //If we do, update current device
         currentDevice = buffer.slice();
 
