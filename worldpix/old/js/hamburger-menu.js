@@ -10,6 +10,6 @@ hamburgerMenu.addEventListener('click',
     async function () {
         clicked = !clicked;
         menu.style.display = !clicked ? 'grid' : 'none';
-        hamburgerMenu.src = clicked ? "/files/hamburger-menu.png" : "/files/close.png";
+        hamburgerMenu.src = clicked ? "/worldpix/old/files/hamburger-menu.png" : "/worldpix/old/files/close.png";
     }
 );
