@@ -9,7 +9,7 @@ import java.awt.*;
 import java.util.List;
 
 public class MainFrame extends JFrame {
-    private final MontoEntradaGUI montoEntrada;
+    private final CantidadEntradaGUI montoEntrada;
     private final MonedaSelectorGUI monedaSelector;
     private final ResultadoMostrarGUI resultadoMostrar;
 
@@ -19,7 +19,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        montoEntrada = new MontoEntradaGUI();
+        montoEntrada = new CantidadEntradaGUI();
         monedaSelector = new MonedaSelectorGUI();
         resultadoMostrar = new ResultadoMostrarGUI();
 
@@ -46,9 +46,5 @@ public class MainFrame extends JFrame {
         add(resultadoMostrar, BorderLayout.SOUTH);
 
         setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(MainFrame::new);
     }
 }

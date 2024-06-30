@@ -1,14 +1,18 @@
 package model;
 
-public record Moneda(String codigo, String nombre) {
-    public Moneda {
-        if (codigo == null || nombre == null) {
-            throw new IllegalArgumentException("Código y nombre no pueden ser nulos");
-        }
+public class Moneda {
+    private final String codigo;
+
+    public Moneda(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getCodigo() {
+        return codigo;
     }
 
     @Override
     public String toString() {
-        return codigo + "-" + nombre;
+        return codigo;
     }
 }

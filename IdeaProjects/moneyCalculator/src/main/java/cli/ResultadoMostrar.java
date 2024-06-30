@@ -1,7 +1,7 @@
 package cli;
 
-import model.Monto;
+import model.Cantidad;
 
 public interface ResultadoMostrar {
-    void mostrar(Monto monto);
+    void mostrar(Cantidad cantidad);
 }

@@ -1,7 +1,7 @@
 package swing;
 
 import cli.ResultadoMostrar;
-import model.Monto;
+import model.Cantidad;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +16,7 @@ public class ResultadoMostrarGUI extends JPanel implements ResultadoMostrar {
     }
 
     @Override
-    public void mostrar(Monto monto) {
-        label.setText("Resultado: " + String.format("%.2f", monto.cantidad()) + " " + monto.moneda().nombre());
+    public void mostrar(Cantidad cantidad) {
+        label.setText("Resultado: " + String.format("%.2f", cantidad.getCantidad()) + " " + cantidad.getMoneda().toString());
     }
 }

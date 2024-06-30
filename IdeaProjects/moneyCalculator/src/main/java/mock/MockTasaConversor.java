@@ -1,7 +1,7 @@
 package mock;
 
 import model.Moneda;
-import model.Monto;
+import model.Cantidad;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -15,24 +15,40 @@ public class MockTasaConversor {
 
     public MockTasaConversor() {
         tasasCambio = new HashMap<>();
-        // Tasas de cambio ficticias
-        tasasCambio.put("USD", 1.0);         // USD es la moneda base
-        tasasCambio.put("EUR", 0.85);        // 1 USD = 0.85 EUR
-        tasasCambio.put("JPY", 110.0);       // 1 USD = 110 JPY
+        tasasCambio.put("USD", 1.0);
+        tasasCambio.put("EUR", 0.85);
+        tasasCambio.put("JPY", 110.0);
+        tasasCambio.put("GBP", 0.75);
+        tasasCambio.put("AUD", 1.35);
+        tasasCambio.put("CAD", 1.25);
+        tasasCambio.put("CHF", 0.92);
+        tasasCambio.put("CNY", 6.45);
+        tasasCambio.put("INR", 74.0);
+        tasasCambio.put("MXN", 20.0);
+        tasasCambio.put("RON", 4.1);
     }
 
     public List<Moneda> cargarMonedas() {
         List<Moneda> monedas = new ArrayList<>();
-        monedas.add(new Moneda("USD", "Dólar estadounidense"));
-        monedas.add(new Moneda("EUR", "Euro"));
-        monedas.add(new Moneda("JPY", "Yen japonés"));
+        for (String codigo : tasasCambio.keySet()) {
+            monedas.add(new Moneda(codigo));
+        }
         return monedas;
     }
 
-    public double convertir(Monto monto, Moneda monedaDestino) {
-        double tasaOrigen = tasasCambio.get(monto.moneda().codigo());
-        double tasaDestino = tasasCambio.get(monedaDestino.codigo());
-        double cantidadConvertida = monto.cantidad() * (tasaDestino / tasaOrigen);
+    public double convertir(Cantidad cantidad, Moneda monedaDestino) {
+        double cantidadOrigen = cantidad.getCantidad();
+        String codigoOrigen = cantidad.getMoneda().getCodigo();
+        String codigoDestino = monedaDestino.getCodigo();
+
+        if (!tasasCambio.containsKey(codigoOrigen) || !tasasCambio.containsKey(codigoDestino)) {
+            throw new IllegalArgumentException("Moneda no soportada");
+        }
+
+        double tasaOrigen = tasasCambio.get(codigoOrigen);
+        double tasaDestino = tasasCambio.get(codigoDestino);
+        double cantidadConvertida = cantidadOrigen * (tasaDestino / tasaOrigen);
+
         BigDecimal cantidadRedondeada = new BigDecimal(cantidadConvertida).setScale(2, RoundingMode.HALF_UP);
         return cantidadRedondeada.doubleValue();
     }
