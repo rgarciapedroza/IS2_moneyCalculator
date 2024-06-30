@@ -17,16 +17,10 @@ public class MonedaSelectorGUI extends JPanel implements MonedaSelector {
         add(selectorMoneda);
     }
 
-    @Override
-    public void cargar(List<Moneda> monedas) {
+    public void establecerMonedas(List<Moneda> monedas) {
         for (Moneda moneda : monedas) {
             selectorMoneda.addItem(moneda);
         }
-    }
-
-    @Override
-    public MonedaSelector definir(List<Moneda> monedas) {
-        return null;
     }
 
     @Override

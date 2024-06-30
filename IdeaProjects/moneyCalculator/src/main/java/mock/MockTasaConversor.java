@@ -1,18 +1,22 @@
 package mock;
 
-import model.Monto;
 import model.Moneda;
+import model.Monto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MockTasaConversor {
-    public double convertir(Monto monto, Moneda moneda) {
-        // Ejemplo simplificado para cargarMonedas
-        return 0.0; // Supongamos que devolvemos siempre cero por ahora
+    public List<Moneda> cargarMonedas() {
+        List<Moneda> monedas = new ArrayList<>();
+        monedas.add(new Moneda("USD", "Dólar estadounidense"));
+        monedas.add(new Moneda("EUR", "Euro"));
+        monedas.add(new Moneda("JPY", "Yen japonés"));
+        return monedas;
     }
 
-    public List<Moneda> cargarMonedas() {
-        // Aquí cargarías las monedas desde algún lugar, por ejemplo, una base de datos
-        return null; // Devolvemos null para simular que no hay monedas cargadas
+    public double convertir(Monto monto, Moneda monedaDestino) {
+        // Ejemplo de conversión: simplemente devuelve la misma cantidad para simplificar.
+        return monto.cantidad();
     }
 }

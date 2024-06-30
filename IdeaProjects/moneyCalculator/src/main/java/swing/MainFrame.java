@@ -1,6 +1,5 @@
 package swing;
 
-import cli.MontoEntradaGUI;
 import control.ConvertirComando;
 import mock.MockTasaConversor;
 import model.Moneda;
@@ -16,7 +15,7 @@ public class MainFrame extends JFrame {
 
     public MainFrame() {
         setTitle("Convertidor de Moneda");
-        setSize(400, 200);
+        setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -24,22 +23,18 @@ public class MainFrame extends JFrame {
         monedaSelector = new MonedaSelectorGUI();
         resultadoMostrar = new ResultadoMostrarGUI();
 
-        // Cargar monedas
         MockTasaConversor tasaConversor = new MockTasaConversor();
         List<Moneda> monedas = tasaConversor.cargarMonedas();
 
-        // Configurar componentes
-        montoEntrada.cargarMonto(monedas);
-        monedaSelector.cargar(monedas);
+        montoEntrada.establecerMonedas(monedas);
+        monedaSelector.establecerMonedas(monedas);
 
-        // Botón de conversión
         JButton btnConvertir = new JButton("Convertir");
         btnConvertir.addActionListener(e -> {
             ConvertirComando comando = new ConvertirComando(montoEntrada, monedaSelector, tasaConversor, resultadoMostrar);
             comando.execute();
         });
 
-        // Panel principal
         JPanel panelPrincipal = new JPanel();
         panelPrincipal.setLayout(new GridLayout(4, 1));
         panelPrincipal.add(new JLabel("Ingrese monto y seleccione moneda"));
@@ -47,15 +42,13 @@ public class MainFrame extends JFrame {
         panelPrincipal.add(monedaSelector);
         panelPrincipal.add(btnConvertir);
 
-        // Agregar componentes al frame
         add(panelPrincipal, BorderLayout.CENTER);
         add(resultadoMostrar, BorderLayout.SOUTH);
+
+        setVisible(true);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            MainFrame frame = new MainFrame();
-            frame.setVisible(true);
-        });
+        SwingUtilities.invokeLater(MainFrame::new);
     }
 }
