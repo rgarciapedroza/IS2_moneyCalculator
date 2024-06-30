@@ -17,6 +17,6 @@ public class ResultadoMostrarGUI extends JPanel implements ResultadoMostrar {
 
     @Override
     public void mostrar(Monto monto) {
-        label.setText("Resultado: " + monto.cantidad() + " " + monto.moneda());
+        label.setText("Resultado: " + String.format("%.2f", monto.cantidad()) + " " + monto.moneda().nombre());
     }
 }

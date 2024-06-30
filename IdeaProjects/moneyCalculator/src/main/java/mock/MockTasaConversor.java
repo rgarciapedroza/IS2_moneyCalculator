@@ -3,6 +3,8 @@ package mock;
 import model.Moneda;
 import model.Monto;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +32,8 @@ public class MockTasaConversor {
     public double convertir(Monto monto, Moneda monedaDestino) {
         double tasaOrigen = tasasCambio.get(monto.moneda().codigo());
         double tasaDestino = tasasCambio.get(monedaDestino.codigo());
-        return monto.cantidad() * (tasaDestino / tasaOrigen);
+        double cantidadConvertida = monto.cantidad() * (tasaDestino / tasaOrigen);
+        BigDecimal cantidadRedondeada = new BigDecimal(cantidadConvertida).setScale(2, RoundingMode.HALF_UP);
+        return cantidadRedondeada.doubleValue();
     }
 }
