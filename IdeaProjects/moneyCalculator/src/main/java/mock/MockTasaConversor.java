@@ -4,9 +4,21 @@ import model.Moneda;
 import model.Monto;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MockTasaConversor {
+    private final Map<String, Double> tasasCambio;
+
+    public MockTasaConversor() {
+        tasasCambio = new HashMap<>();
+        // Tasas de cambio ficticias
+        tasasCambio.put("USD", 1.0);         // USD es la moneda base
+        tasasCambio.put("EUR", 0.85);        // 1 USD = 0.85 EUR
+        tasasCambio.put("JPY", 110.0);       // 1 USD = 110 JPY
+    }
+
     public List<Moneda> cargarMonedas() {
         List<Moneda> monedas = new ArrayList<>();
         monedas.add(new Moneda("USD", "Dólar estadounidense"));
@@ -16,7 +28,8 @@ public class MockTasaConversor {
     }
 
     public double convertir(Monto monto, Moneda monedaDestino) {
-        // Ejemplo de conversión: simplemente devuelve la misma cantidad para simplificar.
-        return monto.cantidad();
+        double tasaOrigen = tasasCambio.get(monto.moneda().codigo());
+        double tasaDestino = tasasCambio.get(monedaDestino.codigo());
+        return monto.cantidad() * (tasaDestino / tasaOrigen);
     }
 }
